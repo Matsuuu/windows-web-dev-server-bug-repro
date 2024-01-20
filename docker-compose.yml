@@ -1,0 +1,10 @@
+services:
+  web:
+    image: node:20
+    user: "node"
+    working_dir: /home/node/app
+    ports:
+      - 8000:8000
+    volumes: 
+      - .:/home/node/app
+    command: bash -c "npm ci && npm start"
